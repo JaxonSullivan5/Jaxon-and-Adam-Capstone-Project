@@ -1,5 +1,5 @@
 Here is what needs to be done:
-1)
-2)
-3)
-4)
+1) Model and print the linkages needed
+2) Learn to use an analog stick to give feedback
+3) Order the micro servos that are needed
+4) Print the part that holds the Analog sticks
