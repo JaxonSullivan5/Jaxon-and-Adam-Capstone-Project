@@ -1,0 +1,7 @@
+1) Five Mirco Servos
+2) Two analog sticks
+3) Arduino board
+4) Arduino Prototype sheild
+5) Camrea??
+6)
+7)
