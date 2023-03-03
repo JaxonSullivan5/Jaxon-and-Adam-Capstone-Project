@@ -1,1 +1,1 @@
-# Prostetic_Hand
+# Capstone_Project
