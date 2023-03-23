@@ -1,0 +1,35 @@
+#define echoPin 2            //IGNORE
+#define trigPin 3            //IGNORE
+#include <Servo.h>           //IGNORE
+Servo myservo;               //IGNORE
+// defines variables
+int pos = 0;                 //Variable to store the servo position
+// defines variables
+long duration;               //IGNORE
+int distance;                //IGNORE
+
+void setup() {               //Setting up the input & output pins
+  myservo.attach(9);         // attaches the servo on pin 9
+  Serial.begin(9600);        // Rate of the monitor
+  pinMode(trigPin, OUTPUT);  // Sets the trigPin as an OUTPUT
+  pinMode(echoPin, INPUT);   // Sets the echoPin as an INPUT
+  pinMode(50, OUTPUT);
+}
+void loop() {
+  digitalWrite(trigPin, LOW);          //IGNORE
+  delayMicroseconds(2);                //IGNORE
+  digitalWrite(trigPin, HIGH);         //IGNORE
+  delayMicroseconds(10);               //IGNORE
+  digitalWrite(trigPin, LOW);          //IGNORE
+  duration = pulseIn(echoPin, HIGH);   //IGNORE
+  distance = duration * 0.034 / 2;     //IGNORE
+  delay(1);                            //IGNORE
+  Serial.print("Distance: ");          //IGNORE
+  Serial.print(distance);              //IGNORE
+  Serial.println(" cm");               //IGNORE
+  
+ myservo.write(distance*);
+ if (distance >= 360){
+ myservo.write(360);
+}
+}
