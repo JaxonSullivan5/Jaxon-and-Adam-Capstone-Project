@@ -30,4 +30,10 @@ This system uses three servos, one for rotation, one for elevation, and one for 
 * One ELEGOO MEGA R3 Board ATmega 2560 costing $21
  (Model Number LYSB01H4ZDYCE-ELECTRNCS)
 * One HiLetgo bread board costing $2.50
-
+ (3-01-0192)
+* WGCD thumbsticks costing $4.80
+ (8542140575)
+ 
+ **Lessons Learned**
+ 
+ During this project we learned mostly about how to code the color sensor and the thumb sticks. This process involved (JAXON PUT YOUR LEARNING EXPERIENCE HERE) Secondly, we learned how to use many different tools in onShape to design our parts to be as structurally strong and clean in appearance. Specifically, we heavily used drafts, fillets, and extrudes to make our model have a smooth appearance. We learned how to use the draft for the triangle like piece on the top of the main arm and the extrusion off the upper base. These parts also required partial fillets until we combined their seperate sections by using the boolean function. We used fillets everywhere except for the bottom of the base pieces because we wanted those pieces to sit flat against whatever surface we mounted them on. We extruded all of our parts from the bottom up and removed sections by using horizontal removal extrudes.
