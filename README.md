@@ -23,7 +23,11 @@ This system uses three servos, one for rotation, one for elevation, and one for 
 
 * Three Deegoo-FPV Servos costing $15 dollars in total
  (Model Number MG995)
-* One mircro servo costing $2.50
+* One HiTec mircro servo costing $2.50
  (Model Number SG90)
-* One color sensor costing $8
+* One HiLetgo color sensor costing $7
  (Model Number TCS34725)
+* One ELEGOO MEGA R3 Board ATmega 2560 costing $21
+ (Model Number LYSB01H4ZDYCE-ELECTRNCS)
+* One HiLetgo bread board costing $2.50
+
