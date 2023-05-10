@@ -1,1 +1,149 @@
-(Jaxon, put the finalized code here with its comments)
+
+#include <Servo.h> //Servo Libary
+#include <Wire.h> //Color Sensor Libary
+#include "Adafruit_TCS34725.h"//Color Sensor Libary
+#include <ezButton.h> //Joystick libary
+#define VRX_PIN  A0 // First Joy Stick
+#define VRY_PIN  A1 // First Joy Stick
+#define VRX2_PIN  A2 //Second Joy Stick
+#define VRY2_PIN  A3 //Second Joy Sti[--ck
+#define SW_PIN   2  // First Joy Stick Click
+#define redpin 11
+#define greenpin 10
+#define bluepin 9
+#define commonAnode false
+Servo Xservo2;  //Assigning names to the servos
+Servo Yservo2;
+Servo Xservo;
+Servo Yservo;
+Servo ClawServo;
+int valX;   //Initilaizes the X and Y values of both joysticks.
+int valY;
+int valX2;
+int valY2;
+int xValue = 0; // To store value of the X axis
+int yValue = 0; // To store value of the Y axis
+int xValue2 = 0;
+int yValue2 = 0;
+int bValue = 0; // To store value of the button
+int pos = 0;
+byte gammatable[256];
+ezButton button(SW_PIN);
+Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);
+void setup() {
+Xservo.attach(2);
+Yservo.attach(3);
+Xservo2.attach(4);
+Yservo2.attach(5);
+ClawServo.attach(6);
+pinMode(8, INPUT);
+pinMode(redpin, OUTPUT);
+pinMode(greenpin, OUTPUT);
+pinMode(bluepin, OUTPUT);
+Serial.begin(9600);
+if (tcs.begin()) {
+Serial.println("Found sensor");
+} else {
+Serial.println("No TCS34725 found ... check your connections");
+while (1);
+}
+for (int i = 0; i < 256; i++) {
+float x = i;
+x /= 255;
+x = pow(x, 2.5);
+x *= 255;
+}
+for (int i = 0; i < 256; i++) {
+float x = i;
+x /= 255;
+x = pow(x, 2.5);  
+x *= 255;
+if (commonAnode) {
+gammatable[i] = 255 - x;
+} else {
+gammatable[i] = x;
+}
+}
+}
+void loop() {
+if ((digitalRead(6)) == LOW){
+float red, green, blue;
+tcs.getRGB(&red, &green, &blue);
+analogWrite(redpin, gammatable[(int)red]);
+analogWrite(greenpin, gammatable[(int)green]);
+analogWrite(bluepin, gammatable[(int)blue]);
+if (red>=100) {
+Xservo.write(30);
+Yservo2.write(30);
+Yservo.write(90);
+ClawServo.write(30);
+delay(1000);
+Xservo.write(0);
+Yservo2.write(0); //up lower the number down increase the nuber
+Yservo.write(0); //forward increase number backwards lower number
+ClawServo.write(0);
+}
+if (blue>=100) {
+Xservo.write(30);
+Yservo2.write(80);
+Yservo.write(90);
+delay(1000);
+Xservo.write(30);
+Yservo2.write(30);
+Yservo.write(30);
+}
+Serial.print("R:\t"); Serial.print(int(red));
+Serial.print("\tG:\t"); Serial.print(int(green));
+Serial.print("\tB:\t"); Serial.print(int(blue));
+Serial.print("\n");
+analogWrite(redpin, gammatable[(int)red]);
+analogWrite(greenpin, gammatable[(int)green]);
+analogWrite(bluepin, gammatable[(int)blue]);
+}
+if ((digitalRead(8)) == HIGH){
+button.loop();
+
+  // read analog X and Y analog values
+xValue = analogRead(VRX_PIN);             //Reads the X and Y values of the joystick
+valX = map(xValue, 0, 1023, 0, 180); //Using the map function we can scale 1023 into just 180
+                                      //allowing the values of the joystick to fit into the servos range
+xValue2 = analogRead(VRX2_PIN);
+valX2 = map(xValue2,0, 1023, 0, 180);
+  
+yValue = analogRead(VRY_PIN);
+valY = map(yValue, 0, 1023, 0, 180);
+  
+yValue2 = analogRead(VRY2_PIN);
+valY2 = map(yValue2,0, 1023, 0, 180);
+
+// Read the button value
+bValue = button.getState();
+
+if (button.isPressed()) {
+ClawServo.write(0);
+// TODO do something here
+}
+
+if (button.isReleased()) {
+ClawServo.write(180);
+ // TODO do something here
+}
+
+// print data to Serial Monitor (not nessary but helps when testing)
+Serial.print("x = ");
+Serial.print(xValue);
+Serial.print(" x2 = ");
+Serial.print(xValue2);
+Serial.print(", y = ");
+Serial.print(yValue);
+Serial.print(" y2 = ");
+Serial.print(yValue2);
+  
+//Prints the values or degree of the servo horns (not nessasary)
+Serial.println(bValue);
+Xservo.write(valX);
+Yservo.write(valY);
+Xservo2.write(valX2);
+Yservo2.write(valY2);
+}
+}
