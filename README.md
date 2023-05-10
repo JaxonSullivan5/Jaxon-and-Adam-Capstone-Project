@@ -3,7 +3,7 @@
 
 5/10/23
 
-(Put Picture of finished product here)
+
 (Figure 1: Picture of Finished Arm)
 
 **Design Summary:**
