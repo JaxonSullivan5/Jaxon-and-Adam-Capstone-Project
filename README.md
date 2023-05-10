@@ -34,10 +34,26 @@ This system uses three servos, one for rotation, one for elevation, and one for 
 * WGCD thumbsticks costing $4.80
  (8542140575)
  
+ TOTAL COST: 
+
  **Lessons Learned**
  
  During this project we learned mostly about how to code the color sensor and the thumb sticks. This process involved (JAXON PUT YOUR LEARNING EXPERIENCE HERE) Secondly, we learned how to use many different tools in onShape to design our parts to be as structurally strong and clean in appearance. Specifically, we heavily used drafts, fillets, and extrudes to make our model have a smooth appearance. We learned how to use the draft for the triangle like piece on the top of the main arm and the extrusion off the upper base. These parts also required partial fillets until we combined their seperate sections by using the boolean function. We used fillets everywhere except for the bottom of the base pieces because we wanted those pieces to sit flat against whatever surface we mounted them on. We extruded all of our parts from the bottom up and removed sections by using horizontal removal extrudes. We were going to make a custom claw piece in addition to the rest of our parts; however, we didn't get the chance to do so because of time constraints. Instead, we just used the orginal claw piece because is suites our purposes well enough.
  
  **Instructions for assembly**
 
-Firstly, you will need all of the parts listed above along with some wires, 220/330 resistors, 0.4 centimeter screws, and 0.4 centimeter nuts. (Note that you will need 
+Firstly, you will need all of the parts listed above in the parts list along with some wires, 220 resistors, a 0.5 cm brass pipe that will be cut to be 3.5 centimeters long, 0.4 centimeter screws, and 0.4 centimeter nuts. All of your screws thould be roughly 1.5 centimeters long except for one screw which should be about 3.5 centimeters long. (Note that you will need a screw driver and/or a wrench of some sort to secure the parts in addition to some tape or hot glue.) 
+
+Secondly, you need to make sure you have all the 3d printed parts which include 3 small long beams, the main lower beam, the extended servo horn beam, the main upper beam, the triangular beam, and the claw pieces. 
+
+Thirdly, you need to assemble your arm by following these simple steps:
+     * First, drop your servo into the bottom base piece and screw it in, make sure you feed the wire out of the holes provided so the the arm sits flat on the table.
+     * Next, attach whatever t shaped servo horn that came with your servo to the previously mentioned servo and then place the top base piece onto it. (There is a box that the servo horn should fit into.)
+     * Then secure the servo horn to the top base via tape or hot glue.
+     * Proceed to fit your other two servos into the sides of your top base and secure them with screws.
+     * Advance by fitting the servo horns into the servos and then putting them into the main lower beam and extended servo horn pieces respectively. (Note that the side with the extended servo horn should be opposite to the upper base with the frontal extrustion.
+     * Continue via sliding the brass pipe through the extended servo piece, the central extrusion, and the main beam. Make sure that it's as tightlu fitted as posible from one servo horn to anather.
+     * Then put the triangular beam in the smaller of the two top notches in the main beam, ensure that the elevated and shortest extrusion is facing away from the top base's extrusion.
+     * Begin to put the main upper beam into the bigger notch of the main lower beam. Make sure the middle hole of the main upper beam is the on lined up with the holes of the triangular piece and the main lower beam. Then you can fit your long 3.5 centimeter screw through all three of these parts. (Note: The longer side of the main upper beam should face the same direction as the shorter side of the triangular piece.
+     * Go ahead and connect the upper base's extrusion to the long side of the triangular piece via a small beam, then use another small beam to connect the end of the servo horn extrustion piece to the shorter side of the main upper beam.
+     * Proceed to connect your final small beam from the small side of the 
