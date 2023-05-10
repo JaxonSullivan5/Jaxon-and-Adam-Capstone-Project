@@ -4,6 +4,8 @@
 5/10/23
 
 
+![IMG_9353 (1)](https://github.com/JaxonSullivan5/Jaxon-and-Adam-Capstone-Project/assets/99275889/be146b6f-c66e-4af9-9be5-aa0153bb52f8)
+
 (Figure 1: Picture of Finished Arm)
 
 **Design Summary:**
@@ -90,15 +92,3 @@ This system uses three servos, one for rotation, one for elevation, and one for 
 * Finally, just assemble the claw section by inserting the micro servo, screwing in its shortened servo horn with its claw pinchers and gears. 
 
 (Also, don't forget to tape in your color sensor onto the front of the mirco servo and wire up all your connections with your thumb sticks if you have them)
-
-
-(Figure 6: Top picture of finished arm)
-
-
-(Figure 7: Side picture of finished arm)
-
-
-(Figure 8: Front picture of finished arm)
-
-
-(Figure 9: Back picture of finished arm
