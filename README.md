@@ -11,6 +11,7 @@
 Our arm design is based off of the EEZYbotARM mk1 made by Carlo Franciscone. We like this design except for the fact that it only incorporates micro servos as opposed to using full sized servos. So we decided to make the design work for full sized servos that were to be used in the base and we figured we'd make the arm longer to maximize the filament limit. In the end, the arm basically functions by having a servo rotate the whole arm, a servo elevate the arm, and a separate servo extend the arm. In terms of controls we simply used the two thumb sticks for moving the arm and using the claw. (One stick controlls rotation/elevation, and the other stick controls extension/grabbing via the button inside the stick. In addition to the manual mode, we have an autonomous mode were we use a color sensor to give information to the servos (so they can sort objects based on thier color) and a rgb LED to display the color of the object detected. Finally, we used a switch to change between the two different modes.
 
 ![Screenshot 2023-05-10 7 01 51 AM](https://github.com/JaxonSullivan5/Jaxon-and-Adam-Capstone-Project/assets/99275889/0bbcb154-71bc-4c67-937c-7d67f1c473c3)
+
 (Figure 2: Original EEZYbotARM mk1 made by Carlo Franciscone.)
 
 **System Details:**
@@ -56,6 +57,7 @@ This system uses three servos, one for rotation, one for elevation, and one for 
  During this project we learned mostly about how to code the color sensor and the thumb sticks. This process involved copying sample code for these components, modifying said code, and then integrating it into the system. This was difficult when we had to merge our autonomous and manual modes. Secondly, we learned how to use many different tools in onShape to design our parts to be as structurally strong and clean in appearance. Specifically, we heavily used drafts, fillets, and extrudes to make our model have a smooth appearance. We learned how to use the draft for the triangle like piece on the top of the main arm and the extrusion off the upper base. These parts also required partial fillets until we combined their seperate sections by using the boolean function. We used fillets everywhere except for the bottom of the base pieces because we wanted those pieces to sit flat against whatever surface we mounted them on. We extruded all of our parts from the bottom up and removed sections by using horizontal removal extrudes. We were going to make a custom claw piece in addition to the rest of our parts; however, we didn't get the chance to do so because of time constraints. Instead, we just used the orginal claw piece because is suites our purposes well enough. My recomendation to any future robotics student is to not overcomplicate your 3d modeled designs unless you have the time to make them look and function perfectly.
  
 ![Screenshot 2023-05-10 7 48 10 AM](https://github.com/JaxonSullivan5/Jaxon-and-Adam-Capstone-Project/assets/99275889/bd846c3f-ae16-46bf-96ac-c483dc95b708)
+
 (Figure 5: Screenshot highlighting the use of drafts and fillets on the triangular beam in particular)
 
  **Instructions for assembly**
