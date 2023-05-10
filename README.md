@@ -42,11 +42,11 @@ This system uses three servos, one for rotation, one for elevation, and one for 
  
  **Instructions for assembly**
 
-Firstly, you will need all of the parts listed above in the parts list along with some wires, 220 resistors, a 0.5 cm brass pipe that will be cut to be 3.5 centimeters long, 0.4 centimeter screws, and 0.4 centimeter nuts. All of your screws thould be roughly 1.5 centimeters long except for one screw which should be about 3.5 centimeters long. (Note that you will need a screw driver and/or a wrench of some sort to secure the parts in addition to some tape or hot glue.) 
+1. You will need all of the parts listed above in the parts list along with some wires, 220 resistors, a 0.5 cm brass pipe that will be cut to be 3.5 centimeters long, 0.4 centimeter screws, and 0.4 centimeter nuts. All of your screws thould be roughly 1.5 centimeters long except for one screw which should be about 3.5 centimeters long. (Note that you will need a screw driver and/or a wrench of some sort to secure the parts in addition to some tape or hot glue.) 
 
-Secondly, you need to make sure you have all the 3d printed parts which include 3 small long beams, the main lower beam, the extended servo horn beam, the main upper beam, the triangular beam, and the claw pieces. 
+2. Make sure you have all the 3d printed parts which include 3 small long beams, the main lower beam, the extended servo horn beam, the main upper beam, the triangular beam, and the claw pieces. 
 
-Thirdly, you need to assemble your arm by following these simple steps:
+3. Assemble your arm by following these simple steps:
 
 * First, drop your servo into the bottom base piece and screw it in, make sure you feed the wire out of the holes provided so the the arm sits flat on the table.
 
